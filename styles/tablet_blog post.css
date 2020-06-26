@@ -1,0 +1,95 @@
+@import url("element_blog post.css");
+
+/*tablet device*/
+@media screen and (min-width:481px) and (max-width:1024px) {
+
+    .continer {
+        width: 90%;
+        display: grid;
+        margin: 0 auto;
+        padding: auto;
+        justify-content: center;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 8% 14% 35% 5% 5% 30% 20% 8%;
+        grid-template-areas:
+        "navbar navbar"
+        "header header"
+        "post-image info"
+        "date date"
+        ". ."
+        "post post"
+        ". ."
+        "footer footer";
+        grid-gap: 5px;
+    }
+
+    .navbar {
+        grid-area: navbar;
+        border-bottom: 1px solid gray;
+        font-size: 20px;
+    }
+
+    .header {
+        grid-area: header;
+        padding: 0 auto;
+      
+    }
+
+    #title {
+       font-size: 40px;
+      
+    }
+
+    .post-image {
+        grid-area: post-image;
+        background-image: url("../images/background.jpg");
+        background-size:contain;
+    }
+
+    .info {
+        grid-area: info;
+        display: grid;
+        grid-template-columns:100%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas:
+        "top"
+        "button";
+        border: 1px solid lightgray;
+        background-color:lightgrey;
+        padding: 5px;
+       
+    }
+
+    .info-img-text {
+        grid-area:top ;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .info-bio {
+        grid-area: button;
+        display: flex;
+        
+    }
+
+    .date {
+        grid-area: date;
+        justify-content: left;
+    }
+
+    .post {
+        grid-area: post;
+    }
+
+    .footer-class{
+        grid-area: footer;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #post-paragraph{
+        font-size: 20px;
+        line-height: 33px;
+    }
+}

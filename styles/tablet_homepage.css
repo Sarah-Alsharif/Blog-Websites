@@ -1,0 +1,122 @@
+@import url("element_homepage.css");  
+
+/*tablet device*/
+@media screen and (min-width:481px) and (max-width:1024px){
+
+    .continer {
+        
+        width: 90%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 5% 25% 5% 35% 35% 15% 5%;
+        justify-content: center;
+        margin: 2px auto;
+        padding: auto;
+        grid-template-areas: 
+        "navbar navbar"
+        "header header"
+        ". ."
+        "post1 post2"
+        "post4 post3"
+        ". ."
+        "footer footer";
+        grid-gap: 8px;
+    }
+
+
+    .navbar {
+        grid-area:navbar;
+        display: flex;  
+        justify-content: space-between;
+        align-items: center;
+    } 
+
+    .header{
+        grid-area:header;     
+        border-radius: 10px;
+        background-image: url("../images/background6.jpg");
+        opacity: 0.4;
+       
+    }
+
+    #hedwelcome{
+        font-size: 30px;
+    }
+
+    .post1{
+        grid-area:post1;
+        background-image: url("../images/background1.jpg");
+        background-size:contain;
+        border-radius: 10px;
+        z-index: -1;
+    }
+
+    .post1_2 {
+        grid-area: post1;
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        background-color:beige;
+        width: 45%;
+        height: 80%;
+        margin-left: 15px;
+        margin-top: 20px;
+        border-radius: 10px;
+       
+    }
+
+    .post2 {
+        grid-area: post2;  
+    }
+
+    .post3{ 
+        grid-area:post3;
+        background-image: url("../images/background4.jpg");
+        background-size:contain;
+        border-radius: 10px;
+        z-index: -1;
+      
+    }
+
+    .post3_1 {
+        grid-area:post3;
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        background-color: beige;
+        width: 80%;
+        height: 70%;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .post4 {
+        grid-area:post4;
+    }
+
+    .footer-class {
+        grid-area:footer;  
+        display: flex; 
+        flex-direction: row;
+        justify-content:space-around;  
+    }
+
+    #nestedgrid1 , 
+    #nestedgrid2 {
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:260px;
+        width: 100%;
+    }
+
+    #nestedgrid1-2 ,
+    #nestedgrid2-1{
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        align-items: center;
+
+    }
+  
+}
